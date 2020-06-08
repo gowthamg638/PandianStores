@@ -103,7 +103,7 @@
                             </div>           
                             <div class="col-xl-2 col-lg-2 col-md-3">
                                 <div class="header-right-btn f-right d-none d-lg-block">
-                                    <a href="tel:+91 98422 65964" class="btn">Contact Now</a>
+                                    <a href="" onclick="makecall(event)" class="btn">Contact Now</a>
                                 </div>
                             </div>
                             <!-- Mobile Menu -->
@@ -385,7 +385,7 @@
                                   
                                 </div>
                                 <p>We are responsive and open about the service you wanted, cost, arrangements , etc. As soon as possible we will deliver the service on your doorstep and could not be happier. And we are Aways fast, always reliable with a good selection and reasonable pricing.A large selection of great service with very competitive pricing. You will be Very happy with all of selections.</p>
-				    <a href="tel:+91 98422 65964" class="white-btn">Book now</a>
+				    <a href="#"  onclick="makecall(event)" class="white-btn">Book now</a>
                             </div>
                         </div>
                     </div>
@@ -607,6 +607,15 @@
 		<!-- Jquery Plugins, main Jquery -->	
         <script src="./assets/js/plugins.js"></script>
         <script src="./assets/js/main.js"></script>
+	    <script>
+	    function makecall(event){var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+		var element = event.currentTarget;
+		if (isMobile) {
+  			element.innerHTML = "+91 98422 65964";
+		} else {
+			window.open("tel:+91 98422 65964");
+		}}
+	    </script>
         
     </body>
 </html>
