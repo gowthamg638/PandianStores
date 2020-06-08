@@ -608,7 +608,9 @@
         <script src="./assets/js/plugins.js"></script>
         <script src="./assets/js/main.js"></script>
 	    <script>
-	    function makecall(event){var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+	    function makecall(event){
+		    event.preventDefault()
+		    var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 		var element = event.currentTarget;
 		if (isMobile) {
 			window.open("tel:+91 98422 65964");
